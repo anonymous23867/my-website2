@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映画の感想サイト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 24px; /* タイトルの大きさ */
+            cursor: pointer;
+            color: #333;
+        }
+        .review {
+            font-size: 16px; /* 感想の文字の大きさ */
+            display: none; /* 初期は非表示 */
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="toggleReview('darkKnightReview')">ダークナイト</h1>
+    <div id="darkKnightReview" class="review">
+        <p>「ダークナイト」は、バットマンの葛藤やジョーカーとの対決が描かれた重厚なストーリーです。映像や演技が素晴らしく、特にヒース・レジャーのジョーカーは圧巻です。</p>
+    </div>
+
+    <h1 onclick="toggleReview('interstellarReview')">インターステラー</h1>
+    <div id="interstellarReview" class="review">
+        <p>「インターステラー」は、宇宙と家族愛をテーマにした壮大な物語です。科学的な考証や映像美が見事で、深いテーマに心を揺さぶられます。</p>
+    </div>
+
+    <script>
+        function toggleReview(id) {
+            const review = document.getElementById(id);
+            review.style.display = (review.style.display === "none" || review.style.display === "") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
